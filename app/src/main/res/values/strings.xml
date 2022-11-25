@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AnyWhereEat</string>
+
+    <string-array name="restaurantNames">
+        <item>McDonald\'s</item>
+        <item>KFC</item>
+        <item>Star Bucks</item>
+        <item>Tim Hortons</item>
+        <item>Burger King</item>
+        <item>Popeyes</item>
+    </string-array>
+
+    <string-array name="userProfile">
+        <item>UserName</item>
+        <item>Email</item>
+        <item>Address</item>
+        <item>Cell</item>
+        <item>PaymentCardNumber</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
