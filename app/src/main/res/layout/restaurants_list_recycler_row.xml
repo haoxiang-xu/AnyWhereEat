@@ -13,7 +13,7 @@
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="16dp"
         app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +23,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/restaurantCard"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha="0"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backgroundCardView" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/backgroundCardView"
@@ -51,7 +62,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="72dp"
                 android:layout_marginBottom="24dp"
-                app:cardCornerRadius="12dp"
+                app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +82,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:alpha="0.64"
                 android:fontFamily="@font/alata"
                 android:text="Restaurant Name"
                 android:textSize="24sp"
@@ -87,18 +97,19 @@
                 android:alpha="0.32"
                 android:fontFamily="@font/alata"
                 android:text="30-60 mins"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/restaurantNameTextView"
                 app:layout_constraintTop_toTopOf="@+id/restaurantNameTextView" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/scoreBoardCardView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp"
+                android:layout_height="28dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                app:cardBackgroundColor="#A4D16F"
+                app:cardBackgroundColor="@color/MAIN"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
 
@@ -112,7 +123,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="4dp"
-                        android:layout_marginBottom="4dp"
+                        android:layout_marginBottom="8dp"
                         android:fontFamily="@font/alata"
                         android:text="10.0"
                         android:textColor="#FFFFFF"

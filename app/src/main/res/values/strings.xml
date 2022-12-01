@@ -2,21 +2,71 @@
     <string name="app_name">AnyWhereEat</string>
 
     <string-array name="restaurantNames">
+        <item>EMPTY</item>
         <item>McDonald\'s</item>
         <item>KFC</item>
         <item>Star Bucks</item>
         <item>Tim Hortons</item>
         <item>Burger King</item>
         <item>Popeyes</item>
+        <item>EMPTY</item>
     </string-array>
 
-    <string-array name="userProfile">
-        <item>UserName</item>
-        <item>Email</item>
-        <item>Address</item>
-        <item>Cell</item>
-        <item>PaymentCardNumber</item>
+    <string-array name="profileList">
+        <item>USERNAME</item>
+        <item>ADDRESS</item>
+        <item>CELL</item>
+        <item>EMAIL</item>
+        <item>PAYMENT</item>
+        <item>PASSWORD</item>
     </string-array>
+
+    <string-array name="user0001">
+        <item>LANCE</item>
+        <item>3333 University Way\, Kelowna\, BC V1V 1V7</item>
+        <item>111-111-1111</item>
+        <item>lance@gmail.com</item>
+        <item>**** **** **** ****</item>
+        <item>123</item>
+    </string-array>
+
+    <string-array name="user0002">
+        <item>JUSTIN</item>
+        <item>3333 University Way\, Kelowna\, BC V1V 1V7</item>
+        <item>222-222-2222</item>
+        <item>justin@gmail.com</item>
+        <item>**** **** **** ****</item>
+        <item>000</item>
+    </string-array>
+
+    <string-array name="user0003">
+        <item>ALEX</item>
+        <item>3333 University Way\, Kelowna\, BC V1V 1V7</item>
+        <item>123-456-7890</item>
+        <item>alex@gmail.com</item>
+        <item>**** **** **** ****</item>
+        <item>456</item>
+    </string-array>
+
+    <string-array name="user0004">
+        <item>YUAN</item>
+        <item>3333 University Way\, Kelowna\, BC V1V 1V7</item>
+        <item>888-888-8888</item>
+        <item>bob123@gmail.com</item>
+        <item>**** **** **** ****</item>
+        <item>789</item>
+    </string-array>
+
+    <string-array name="user0005">
+        <item>GRACE</item>
+        <item>3333 University Way\, Kelowna\, BC V1V 1V7</item>
+        <item>777-777-7777</item>
+        <item>grace@gmail.com</item>
+        <item>**** **** **** ****</item>
+        <item>222</item>
+    </string-array>
+
+    <string name="title_activity_maps">MapsActivity</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

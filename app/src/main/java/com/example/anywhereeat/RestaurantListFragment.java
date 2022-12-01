@@ -1,5 +1,6 @@
 package com.example.anywhereeat;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,11 +22,6 @@ import java.util.ArrayList;
  *
  */
 public class RestaurantListFragment extends Fragment {
-
-    ArrayList<Restaurant> restaurants = new ArrayList<>();
-
-    int[] restaurantLogos = {R.drawable.logo_mcdonalds, R.drawable.logo_kfc, R.drawable.logo_starbucks, R.drawable.logo_timhortons, R.drawable.logo_burgerking, R.drawable.logo_popeyes};
-    int[] restaurantBackgrounds = {R.drawable.background_mc, R.drawable.background_kfc, R.drawable.background_starbucks, R.drawable.background_th, R.drawable.background_bk, R.drawable.background_pe};
 
     RecyclerView restaurantList;
 
@@ -81,11 +77,12 @@ public class RestaurantListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //Initialize restaurant data
+        HomeActivity.restaurants = new ArrayList<>();
         loadRestaurantData();
 
         //Construct restaurant recyclerview
         restaurantList = view.findViewById(R.id.restaurantsListRecyclerView);
-        RestaurantRecyclerViewAdapter restaurantListAdapter = new RestaurantRecyclerViewAdapter(getContext(), restaurants);
+        RestaurantRecyclerViewAdapter restaurantListAdapter = new RestaurantRecyclerViewAdapter(getContext(), HomeActivity.restaurants);
         restaurantList.setAdapter(restaurantListAdapter);
         restaurantList.setLayoutManager(new LinearLayoutManager(getContext()));
     }
@@ -93,8 +90,17 @@ public class RestaurantListFragment extends Fragment {
     private void loadRestaurantData(){
         String[] restaurantNames = getResources().getStringArray(R.array.restaurantNames);
 
+        String[][] restaurantMenuNames = {{}, HomeActivity.mcdonalds_item, HomeActivity.kfc_item, HomeActivity.starbucks_item, {}, {}, {}, {}};
+        double[][] restaurantMenuPrices = {{}, HomeActivity.mcdonalds_price, HomeActivity.kfc_price, HomeActivity.starbucks_price, {}, {}, {}, {}};
+        int[][] restaurantMenuIcons = {{}, HomeActivity.mcdonalds_menu, HomeActivity.kfc_menu, HomeActivity.startbucks_menu, {}, {}, {}, {}};
+
         for(int i = 0; i < restaurantNames.length; i++){
-            restaurants.add(new Restaurant(restaurantNames[i],restaurantLogos[i], restaurantBackgrounds[i]));
+            HomeActivity.restaurants.add(new Restaurant(restaurantNames[i],
+                                                        HomeActivity.restaurantLogos[i],
+                                                        HomeActivity.restaurantBackgrounds[i],
+                                                        restaurantMenuNames[i],
+                                                        restaurantMenuIcons[i],
+                                                        restaurantMenuPrices[i]));
         }
     }
 
