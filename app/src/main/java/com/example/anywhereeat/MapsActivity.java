@@ -69,7 +69,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void backButton(View view) {
-        Intent backIntent = new Intent(this, MainActivity.class);
+        Intent backIntent = new Intent(this, HomeActivity.class);
         startActivity(backIntent);
     }
 }
