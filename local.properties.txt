@@ -1,0 +1,3 @@
+Please add the following to your local.properties
+
+MAPS_API_KEY=AIzaSyBuRWw63gddB59hugSirWSImCXrrprVAi0
