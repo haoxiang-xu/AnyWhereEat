@@ -4,12 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.widget.Toast;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.FileOutputStream;
 
 public class CartActivity extends AppCompatActivity {
 
@@ -43,8 +48,33 @@ public class CartActivity extends AppCompatActivity {
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CartActivity.this, MapsActivity.class);
-                startActivity(intent);
+
+                if(total_price != 0){
+
+                    int count = 0;
+                    String[][] itemInOrder;
+
+                    for(int i = 0; i < cart.length; i++){
+                        if(cart[i] != 0){count++;}
+                    }
+                    itemInOrder = new String[count][3];
+                    count = 0;
+                    for(int i = 0; i < cart.length; i++){
+                        if(cart[i] != 0){
+                            itemInOrder[count][0] = restaurant.itemNames[i];
+                            itemInOrder[count][1] = String.valueOf(restaurant.prices[i]);
+                            itemInOrder[count][2] = String.valueOf(cart[i]);
+                            count++;
+                        }
+                    }
+
+                    NewOrders(itemInOrder, restaurant.getRestaurantName(), "unfullfiled");
+
+                    Intent intent = new Intent(CartActivity.this, MapsActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(CartActivity.this, "Nothing in cart", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -101,5 +131,33 @@ public class CartActivity extends AppCompatActivity {
         }
         totalPrice.setText("CA$" + Math.round(total_price*100.00)/100.00);
         restaurantName.setText(restaurant.getRestaurantName());
+    }
+
+    public void NewOrders(String[][] order,
+                          String restaurantID,
+                          String state){
+
+        String FileName = "order.txt";
+
+        String FileContents = restaurantID + "\n"
+                + state + "\n";
+
+        for (int i = 0; i < order.length; i++) {
+            for (int j = 0; j < order[0].length; j++) {
+                FileContents = FileContents + order[i][j] + "\n";
+            }
+        }
+
+        FileOutputStream accountOutputStream; //allow a file to be opened for writing
+
+        try {
+            accountOutputStream = openFileOutput(FileName, Context.MODE_APPEND);
+            accountOutputStream.write(FileContents.getBytes());
+            accountOutputStream.close();
+            Toast.makeText(CartActivity.this, "Order placed successfully", Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -32,6 +33,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.location_map);
         mapFragment.getMapAsync(this);
+
     }
 
     /**
@@ -69,7 +71,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void backButton(View view) {
-        Intent backIntent = new Intent(this, MainActivity.class);
+        Intent backIntent = new Intent(this, HomeActivity.class);
         startActivity(backIntent);
     }
 }
