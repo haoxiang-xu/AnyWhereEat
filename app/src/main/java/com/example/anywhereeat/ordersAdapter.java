@@ -1,6 +1,7 @@
 package com.example.anywhereeat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,12 @@ public class ordersAdapter<RecyclerViewHolder> extends RecyclerView.Adapter<orde
             }else{
                 holder.restaurantImage.setImageResource(R.drawable.logo_starbucks);
             }
+            holder.tracking.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    trackingButton(view);
+                }
+            });
         }
     }
 
@@ -55,6 +62,7 @@ public class ordersAdapter<RecyclerViewHolder> extends RecyclerView.Adapter<orde
         TextView restaurantName;
         ConstraintLayout orederCard;
         ImageView restaurantImage;
+        TextView tracking;
 
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +70,12 @@ public class ordersAdapter<RecyclerViewHolder> extends RecyclerView.Adapter<orde
             restaurantName = itemView.findViewById(R.id.order_restaurant_name);
             orederCard = itemView.findViewById(R.id.orederCard);
             restaurantImage = itemView.findViewById(R.id.restaurant_image_order);
+            tracking = itemView.findViewById(R.id.tracking_button);
         }
+    }
+
+    public void trackingButton(View view) {
+        Intent intent = new Intent(context, MapsActivity.class);
+        context.startActivity(intent);
     }
 }

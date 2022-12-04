@@ -57,13 +57,14 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView12"
+                        android:id="@+id/tracking_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="2dp"
                         android:alpha="1"
+                        android:clickable="true"
                         android:fontFamily="@font/alata"
-                        android:text="REORDER"
+                        android:text="TRACKING"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
