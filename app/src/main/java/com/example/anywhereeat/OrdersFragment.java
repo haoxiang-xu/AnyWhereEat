@@ -80,11 +80,14 @@ public class OrdersFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //Construct restaurant recyclerview
-        ordersList = view.findViewById(R.id.ordersRecyclerView);
-        ordersAdapter adapter = new ordersAdapter(getContext(), GetOrderRestaurantID());
-        ordersList.setAdapter(adapter);
-        ordersList.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        if(GetOrderRestaurantID() != null) {
+            //Construct restaurant recyclerview
+            ordersList = view.findViewById(R.id.ordersRecyclerView);
+            ordersAdapter adapter = new ordersAdapter(getContext(), GetOrderRestaurantID());
+            ordersList.setAdapter(adapter);
+            ordersList.setLayoutManager(new LinearLayoutManager(getContext()));
+        }
 
     }
 

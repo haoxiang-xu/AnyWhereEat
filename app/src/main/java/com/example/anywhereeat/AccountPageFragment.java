@@ -26,9 +26,9 @@ import java.util.ArrayList;
  */
 public class AccountPageFragment extends Fragment {
 
-    TextView userName;
+    public static TextView userName;
     Button logout;
-    RecyclerView userInfoList;
+    public static RecyclerView userInfoList;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -95,7 +95,7 @@ public class AccountPageFragment extends Fragment {
         //Initialize user data
         HomeActivity.userInfos = new ArrayList<>();
 
-        String name = loadUserData(HomeActivity.userInformations);
+        String name = loadUserData(HomeActivity.userInformations, this.getContext());
 
         //Display user name
         userName = view.findViewById(R.id.userNameTextView);
@@ -108,14 +108,29 @@ public class AccountPageFragment extends Fragment {
         userInfoList.setLayoutManager(new LinearLayoutManager(getContext()));
     }
 
-    private String loadUserData(String[] userInfo){
-        String[] profileList = getResources().getStringArray(R.array.profileList);
+    private static String loadUserData(String[] userInfo, Context context){
+        String[] profileList = context.getResources().getStringArray(R.array.profileList);
 
         for(int i = 1; i < profileList.length; i++){
             HomeActivity.userInfos.add(new UserInfo(profileList[i], userInfo[i], HomeActivity.infoIcon[i-1]));
         }
 
         return userInfo[0];
+    }
+
+    public static void updateView(Context context){
+        //Initialize user data
+        HomeActivity.userInfos = new ArrayList<>();
+
+        String name = loadUserData(HomeActivity.userInformations, context);
+
+        //Display user name
+        userName.setText(name);
+
+        //Construct restaurant recyclerview
+        UserInfoViewAdapter userInfoViewAdapter = new UserInfoViewAdapter(context, HomeActivity.userInfos);
+        userInfoList.setAdapter(userInfoViewAdapter);
+        userInfoList.setLayoutManager(new LinearLayoutManager(context));
     }
 
 }

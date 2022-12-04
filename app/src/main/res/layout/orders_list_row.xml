@@ -64,7 +64,7 @@
                         android:alpha="1"
                         android:clickable="true"
                         android:fontFamily="@font/alata"
-                        android:text="TRACKING"
+                        android:text="track order"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
