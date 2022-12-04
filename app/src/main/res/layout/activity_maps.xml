@@ -6,82 +6,13 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="2dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView22">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:alpha="0.32"
-                android:fontFamily="@font/alata"
-                android:text="CONTACT DRIVER"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView19"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="1dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView22"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:alpha="0.32"
-                android:fontFamily="@font/alata"
-                android:text="CONTACT RESTAURANT"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
         android:id="@+id/cardView18"
         android:layout_width="match_parent"
-        android:layout_height="28dp"
+        android:layout_height="40dp"
         android:clickable="true"
         android:onClick="showStatus"
-        app:cardElevation="8dp"
         app:cardBackgroundColor="#FFFFFF"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -134,25 +65,115 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView21"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="48dp"
+                app:cardCornerRadius="36dp"
+                app:cardElevation="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.64"
+                        android:src="@drawable/ic_baseline_face_6_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView19"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="46dp"
+                app:cardBackgroundColor="#7AC027"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView21"
+                app:layout_constraintStart_toStartOf="@+id/cardView21">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_phone_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:alpha="0.64"
+                android:src="@drawable/ic_baseline_done_24"
+                app:layout_constraintBottom_toBottomOf="@+id/statusMessage1"
+                app:layout_constraintEnd_toStartOf="@+id/statusMessage1"
+                app:layout_constraintTop_toTopOf="@+id/statusMessage1" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.64"
+                android:fontFamily="@font/alata"
+                android:text="  is taking care of your order"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintStart_toEndOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alata"
+                android:text="JUSTIN"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cardView21"
+                app:layout_constraintTop_toBottomOf="@+id/cardView21" />
+
             <TextView
                 android:id="@+id/statusMessage1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="16dp"
+                android:alpha="1"
                 android:fontFamily="@font/alata"
                 android:text="Your order is being prepared"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView21" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:alpha="0.64"
                 android:fontFamily="@font/alata"
                 android:text="Your order has been picked up"
@@ -164,8 +185,8 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:alpha="0.64"
+                android:layout_marginTop="4dp"
+                android:alpha="0.32"
                 android:fontFamily="@font/alata"
                 android:text="Your order is on the way"
                 android:textSize="16sp"
@@ -176,9 +197,9 @@
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:alpha="0.64"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="32dp"
+                android:alpha="0.16"
                 android:fontFamily="@font/alata"
                 android:text="Your order has been delivered"
                 android:textSize="16sp"
@@ -190,7 +211,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView20"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
+            android:layout_height="40dp"
             android:clickable="true"
             android:onClick="closeStatus"
             app:cardBackgroundColor="#FFFFFF"
@@ -241,12 +262,12 @@
                 android:alpha="0.32"
                 android:clickable="true"
                 android:onClick="backButton"
+                android:src="@drawable/ic_baseline_close_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/ic_baseline_chevron_left_24"
-                tools:srcCompat="@drawable/ic_baseline_chevron_left_24" />
+                tools:srcCompat="@drawable/ic_baseline_close_24" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

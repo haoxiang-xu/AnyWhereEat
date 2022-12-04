@@ -76,7 +76,6 @@ public class SignupActivity extends AppCompatActivity {
                 for (int i = 0; i < accounts.length; i++) {
                     if (username.equals(accounts[i][0])) {
                         isDuplicateUsername = true;
-                        Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
                     }
                 }
                 if (isDuplicateUsername) {
