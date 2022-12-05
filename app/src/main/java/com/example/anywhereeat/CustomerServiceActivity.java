@@ -3,11 +3,8 @@ package com.example.anywhereeat;
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
-import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class CustomerServiceActivity extends AppCompatActivity {
 
@@ -32,6 +28,8 @@ public class CustomerServiceActivity extends AppCompatActivity {
     CardView c_ask;
     CardView c_orderld;
     CardView c_reply;
+
+    Button provideHelp;
 
     ImageView goBack;
 
@@ -52,6 +50,16 @@ public class CustomerServiceActivity extends AppCompatActivity {
         orderId = findViewById(R.id.orderId);
         reply = findViewById(R.id.reply);
         ans = findViewById(R.id.ans);
+
+        provideHelp = findViewById(R.id.provideHelpButton);
+
+        provideHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CustomerServiceActivity.this, HelpVideoActivity.class);
+                startActivity(intent);
+            }
+        });
 
         c_confirm = findViewById(R.id.confirm_card);
         c_ask = findViewById(R.id.ask_card);
@@ -81,8 +89,6 @@ public class CustomerServiceActivity extends AppCompatActivity {
             }
 
         });
-
-
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

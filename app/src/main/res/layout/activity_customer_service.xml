@@ -181,6 +181,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <Button
+                    android:id="@+id/provideHelpButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="128dp"
+                    android:alpha="0"
+                    android:text="Button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <RadioGroup
                     android:id="@+id/radioGroup"
                     android:layout_width="272dp"
@@ -225,6 +236,15 @@
                         android:alpha="0.64"
                         android:fontFamily="@font/alata"
                         android:text="Order arrived late"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/op6"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:alpha="0.64"
+                        android:fontFamily="@font/alata"
+                        android:text="How to use the app"
                         android:textStyle="bold" />
 
                     <RadioButton
