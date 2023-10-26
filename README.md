@@ -17,3 +17,15 @@ https://github.com/haoxiang-xu/AnyWhereEat/assets/59581718/2ed1bf02-cb9a-41b1-bd
 
 [AndroidStudio-shield]: https://img.shields.io/badge/Android_Studio-000000?style=for-the-badge&logo=AndroidStudio&logoColor=3DDC84&labelColor=222222
 [AndroidStudio-install]: https://developer.android.com/studio?gclid=CjwKCAjwnOipBhBQEiwACyGLuoL0oFBDXfZmBufubcQwkA19MBUueyODKJshEecSKE6rPMVVzhOO-xoCzV4QAvD_BwE&gclsrc=aw.ds
+
+## [ Getting Started ]
+
+### Cloning the Repository
+
+`https://github.com/haoxiang-xu/AnyWhereEat.git`
+
+### Setting Up in Android Studio
+- Open Android Studio.
+- Click on Open an existing Android Studio project.
+- Navigate to the directory where you cloned the project.
+- Select the project directory and click Open.
