@@ -6,6 +6,12 @@
 
 <span style="opacity: 0.64">Designed with user experience in mind, akin to industry leaders like SkipTheDishes and Uber Eats. Enables seamless menu exploration, order customization, real-time delivery tracking, and secure mobile payments. Regularly updated for optimal performance, it's the go-to choice for the modern, on-the-go individual.</span>
 
+![UI](https://github.com/haoxiang-xu/AnyWhereEat/assets/59581718/bc728b1e-a80f-4dd7-8e37-f9db46475efa)
+
+
+https://github.com/haoxiang-xu/AnyWhereEat/assets/59581718/2ed1bf02-cb9a-41b1-bd8c-3cf3dbb23fbc
+
+
 ### Built with
 [![Languages](https://skillicons.dev/icons?i=androidstudio,java)](https://skillicons.dev)
 
